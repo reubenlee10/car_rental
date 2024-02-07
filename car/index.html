@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental System - Add Car</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #ffd700; /* Yellow background */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .car-form-container {
+        width: 100%;
+        max-width: 400px;
+        padding: 2em;
+        background-color: #fff; /* White background */
+        border: 5px solid #0057b7; /* Blue border */
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #0057b7; /* Blue text */
+        text-align: center;
+        margin-bottom: 1em;
+      }
+
+      .input-group {
+        margin-bottom: 1em;
+      }
+
+      .input-group label {
+        display: block;
+        color: #0057b7; /* Blue text */
+        margin-bottom: 0.5em;
+      }
+
+      .input-group input,
+      .input-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #0057b7; /* Blue border */
+        border-radius: 5px;
+        font-size: 1em;
+      }
+
+      .submit-button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #0057b7; /* Blue background */
+        color: #fff; /* White text */
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .submit-button:hover {
+        background-color: #004cb7; /* Darker blue background */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="car-form-container">
+      <h2>Add New Car</h2>
+      <form id="carForm" action="saveCar.php" method="post">
+        <div class="input-group">
+          <label for="model">Car Model:</label>
+          <input type="text" id="model" name="model" required />
+        </div>
+        <div class="input-group">
+          <label for="plate_number">Plate Number:</label>
+          <input type="text" id="plate_number" name="plate_number" required />
+        </div>
+        <div class="input-group">
+          <label for="color">Color:</label>
+          <input type="text" id="color" name="color" required />
+        </div>
+        <div class="input-group">
+          <label for="capacity">Capacity:</label>
+          <select id="capacity" name="capacity" required>
+            <option value="">Select Capacity</option>
+            <option value="2">2-Seater</option>
+            <option value="4">4-Seater</option>
+            <option value="5">5-Seater</option>
+            <option value="7">7-Seater</option>
+            <!-- ... Other options ... -->
+          </select>
+        </div>
+        <button type="submit" class="submit-button">Add Car</button>
+      </form>
+    </div>
+    <script>
+      // Optional: Add JavaScript here for form submission handling
+    </script>
+  </body>
+</html>
